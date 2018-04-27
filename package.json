@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "cross-env": "^5.1.4",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -16,9 +17,9 @@
     "styled-components": "^3.2.6"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env NODE_PATH=src react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "cross-env NODE_PATH=src react-scripts start react-scripts test --env=jsdom",
     "test:watch": "npm test -- --watch",
     "eject": "react-scripts eject"
   }
