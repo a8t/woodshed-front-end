@@ -19,7 +19,7 @@
   "scripts": {
     "start": "cross-env NODE_PATH=src react-scripts start",
     "build": "react-scripts build",
-    "test": "cross-env NODE_PATH=src react-scripts start react-scripts test --env=jsdom",
+    "test": "cross-env NODE_PATH=src react-scripts test --env=jsdom",
     "test:watch": "npm test -- --watch",
     "eject": "react-scripts eject"
   }

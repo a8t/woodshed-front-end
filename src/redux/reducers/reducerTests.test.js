@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as exerciseActions from '../actions/exerciseActions';
-import { exercises } from './exerciseReducers';
+import * as exerciseActions from 'redux/actions/exerciseActions';
+import { exercises } from 'redux/reducers/exerciseReducers';
 
 const stringify = JSON.stringify;
 

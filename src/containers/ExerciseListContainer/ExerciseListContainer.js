@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import {
     deleteExercise,
 } from '../../redux/actions/exerciseActions';
 
-import ExerciseList from '../../components/ExerciseList/ExerciseList';
+import ExerciseList from 'components/ExerciseList/ExerciseList';
 
 function mapStateToProps(state) {
     return {
@@ -21,6 +20,6 @@ function mapDispatchToProps(dispatch) {
     return {
         handleDeleteExercise
     };
-};
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(ExerciseList);

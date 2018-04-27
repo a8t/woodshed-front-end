@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import { ADD_EXERCISE, DELETE_EXERCISE } from '../actions/exerciseActions';
+import { ADD_EXERCISE, DELETE_EXERCISE } from 'redux/actions/exerciseActions';
 
 const initialState = {
     exercises: [
@@ -42,8 +42,8 @@ export function exercises(state = initialState.exercises, action) {
     }
 }
 
-const exercisesReducers = combineReducers({
+const exerciseReducers = combineReducers({
     exercises
 });
 
-export default exercisesReducers;
+export default exerciseReducers;

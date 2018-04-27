@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import ExerciseCard from '../ExerciseCard/ExerciseCard';
+import ExerciseCard from 'components/ExerciseCard/ExerciseCard';
 
 const ExerciseList = props => {
     const { exercises, handleDeleteExercise } = props;

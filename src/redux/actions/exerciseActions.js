@@ -1,4 +1,4 @@
-import { makeActionCreator } from '../../utils/redux';
+import { makeActionCreator } from 'utils/redux';
 
 export const ADD_EXERCISE = 'ADD_EXERCISE';
 export const addExercise = makeActionCreator(ADD_EXERCISE, 'newExercise');
