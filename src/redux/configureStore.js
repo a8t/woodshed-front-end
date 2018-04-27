@@ -9,9 +9,7 @@ const loggerMiddleware = createLogger();
 const middleware = composeEnhancers(applyMiddleware(thunk));
 
 let store = createStore(
-    combineReducers({
-        rootReducer,
-    }),
+    rootReducer,
     middleware,
 );
 

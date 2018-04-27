@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import ExerciseCardList from '../ExerciseCardList/ExerciseCardList';
+import ExerciseListContainer from '../ExerciseListContainer/ExerciseListContainer';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <ExerciseCardList />
+        <ExerciseListContainer />
       </div>
     );
   }
