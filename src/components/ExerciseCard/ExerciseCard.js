@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import { Card, Dropdown } from 'semantic-ui-react';
 
 const ExerciseCard = props => {
-    const { id, name, bpm, handleDeleteExercise, key } = props;
+    const { id, name, bpm, handleDeleteExercise } = props;
     const deleteThisExercise = () => handleDeleteExercise(id);
     return (
-        <Card key={key}>
+        <Card key={id}>
             <Card.Content>
                 <Card.Header>
                     {name}
