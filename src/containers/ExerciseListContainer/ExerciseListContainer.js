@@ -1,8 +1,6 @@
 import { connect } from 'react-redux';
 
-import {
-    deleteExercise,
-} from '../../redux/actions/exerciseActions';
+import { deleteExercise } from '../../redux/actions/exerciseActions';
 
 import ExerciseList from 'components/ExerciseList/ExerciseList';
 
@@ -13,12 +11,12 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    const handleDeleteExercise = (exerciseToDelete) => {
+    const handleDeleteExercise = exerciseToDelete => {
         dispatch(deleteExercise(exerciseToDelete));
     };
 
     return {
-        handleDeleteExercise
+        handleDeleteExercise,
     };
 }
 

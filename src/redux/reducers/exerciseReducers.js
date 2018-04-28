@@ -1,6 +1,11 @@
 import { combineReducers } from 'redux';
 
-import { ADD_EXERCISE, EDIT_EXERCISE, DELETE_EXERCISE, SELECT_EXERCISE } from 'redux/actions/exerciseActions';
+import {
+    ADD_EXERCISE,
+    EDIT_EXERCISE,
+    DELETE_EXERCISE,
+    SELECT_EXERCISE,
+} from 'redux/actions/exerciseActions';
 
 const initialState = {
     selectedExercise: 'dsf34D',
@@ -26,7 +31,6 @@ const initialState = {
 export function selectedExercise(state = initialState.selectedExercise, action) {
     switch (action.type) {
         case SELECT_EXERCISE: {
-            console.log(action)
             return action.selectExerciseId;
         }
 
