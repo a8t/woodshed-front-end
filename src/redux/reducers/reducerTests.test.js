@@ -11,12 +11,14 @@ describe('Exercises reducers', () => {
             const initialState = [];
 
             const addExerciseAction = exerciseActions.addExercise({
+                id: '123',
                 name: 'test',
                 bpm: 120
             });
 
             const expectedState = [
                 {
+                    id: '123',
                     name: 'test',
                     bpm: 120
                 }
@@ -31,15 +33,13 @@ describe('Exercises reducers', () => {
         it('removes exercise', () => {
             const initialState = [
                 {
+                    id: '123',
                     name: 'test',
                     bpm: 120
                 }
             ];
 
-            const deleteExerciseAction = exerciseActions.deleteExercise({
-                name: 'test',
-                bpm: 120
-            });
+            const deleteExerciseAction = exerciseActions.deleteExercise('123');
 
             const expectedState = [];
 

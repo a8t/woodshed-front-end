@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { Card, Dropdown } from 'semantic-ui-react';
 
 const ExerciseCard = props => {
-    const { name, bpm, handleDeleteExercise, key } = props;
-    const deleteThisExercise = () => handleDeleteExercise({ name, bpm });
+    const { id, name, bpm, handleDeleteExercise, key } = props;
+    const deleteThisExercise = () => handleDeleteExercise(id);
     return (
         <Card key={key}>
             <Card.Content>

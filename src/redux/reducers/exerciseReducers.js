@@ -35,7 +35,7 @@ export function exercises(state = initialState.exercises, action) {
             ];
 
         case DELETE_EXERCISE:
-            const matchExercise = exercise => exercise.id === action.deleteExercise.id;
+            const matchExercise = exercise => exercise.id === action.deleteExerciseId;
             const indexOfExercise = state.findIndex(matchExercise);
             return [...state.slice(0, indexOfExercise), ...state.slice(indexOfExercise + 1)];
 
