@@ -13,18 +13,34 @@ describe('Exercises reducers', () => {
             const addExerciseAction = exerciseActions.addExercise({
                 id: '123',
                 name: 'test',
-                bpm: 120
+                bpm: 120,
             });
 
             const expectedState = [
                 {
                     id: '123',
                     name: 'test',
-                    bpm: 120
-                }
+                    bpm: 120,
+                },
             ];
 
             expect(stringify(exercises(initialState, addExerciseAction))).toBe(
+                stringify(expectedState)
+            );
+        });
+    });
+    describe('EDIT_EXERCISE', () => {
+        it('edits exercise', () => {
+            const initialState = [{ id: '123', name: 'test', bpm: 120 }];
+
+            const editExerciseAction = exerciseActions.editExercise('123', {
+                name: 'hello',
+                bpm: 134,
+            });
+
+            const expectedState = [{ id: '123', name: 'hello', bpm: 134 }];
+
+            expect(stringify(exercises(initialState, editExerciseAction))).toBe(
                 stringify(expectedState)
             );
         });
@@ -35,8 +51,8 @@ describe('Exercises reducers', () => {
                 {
                     id: '123',
                     name: 'test',
-                    bpm: 120
-                }
+                    bpm: 120,
+                },
             ];
 
             const deleteExerciseAction = exerciseActions.deleteExercise('123');
