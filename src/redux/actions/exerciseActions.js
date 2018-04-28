@@ -8,3 +8,6 @@ export const editExercise = makeActionCreator(EDIT_EXERCISE, 'id', 'updatedExerc
 
 export const DELETE_EXERCISE = 'DELETE_EXERCISE';
 export const deleteExercise = makeActionCreator(DELETE_EXERCISE, 'deleteExerciseId');
+
+export const SELECT_EXERCISE = 'SELECT_EXERCISE';
+export const selectExercise = makeActionCreator(SELECT_EXERCISE, 'selectExerciseId');

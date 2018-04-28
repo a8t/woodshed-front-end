@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
 
-import { ADD_EXERCISE, EDIT_EXERCISE, DELETE_EXERCISE } from 'redux/actions/exerciseActions';
+import { ADD_EXERCISE, EDIT_EXERCISE, DELETE_EXERCISE, SELECT_EXERCISE } from 'redux/actions/exerciseActions';
 
 const initialState = {
+    selectedExercise: 'dsf34D',
     exercises: [
         {
             id: 'dsf34D',
@@ -21,6 +22,18 @@ const initialState = {
         },
     ],
 };
+
+export function selectedExercise(state = initialState.selectedExercise, action) {
+    switch (action.type) {
+        case SELECT_EXERCISE: {
+            console.log(action)
+            return action.selectExerciseId;
+        }
+
+        default:
+            return state;
+    }
+}
 
 export function exercises(state = initialState.exercises, action) {
     switch (action.type) {
@@ -55,7 +68,7 @@ export function exercises(state = initialState.exercises, action) {
 }
 
 const exerciseReducers = combineReducers({
+    selectedExercise,
     exercises,
 });
-
 export default exerciseReducers;

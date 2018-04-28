@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as exerciseActions from 'redux/actions/exerciseActions';
-import { exercises } from 'redux/reducers/exerciseReducers';
+import { exercises, selectedExercise } from 'redux/reducers/exerciseReducers';
 
 const stringify = JSON.stringify;
 
@@ -60,6 +60,18 @@ describe('Exercises reducers', () => {
             const expectedState = [];
 
             expect(stringify(exercises(initialState, deleteExerciseAction))).toBe(
+                stringify(expectedState)
+            );
+        });
+    });
+    describe('SELECT_EXERCISE', () => {
+        it('changes exercise', () => {
+            const initialState = '34asdaA3';
+
+            const selectExerciseAction = exerciseActions.selectExercise('asd3f5g');
+            const expectedState = 'asd3f5g';
+
+            expect(stringify(selectedExercise(initialState, selectExerciseAction))).toBe(
                 stringify(expectedState)
             );
         });
